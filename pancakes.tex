@@ -112,6 +112,16 @@ If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If ev
 
 The player who empties their hand first wins the game. If the game ends with everyone passing, the player with the least number of cards in their hand wins the game; if there are multiple players with the least number of cards, they tie.
 
+\section{Scoring}
+
+Points go to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that by one less than the number of players, and round up to the nearest whole number.
+
+For the mathematically inclined:
+
+$$
+\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players} - 1\rangle}\right\rceil
+$$
+
 \section{Glossary}
 \begin{description}
   \item[Stack] (\autoref{sec:setup})\\
