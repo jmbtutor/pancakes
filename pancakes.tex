@@ -134,21 +134,31 @@ The player who empties their hand first wins the game. If the game ends with eve
 
 \section{Scoring}
 
-Points go to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that by one less than the number of players, and round up to the nearest whole number.
+There are two scoring schemes: one for multiplayer-games and one for single-player games. Higher scores are better.
+
+\subsection{2+ Players}
+
+Points are awarded to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.
 
 For the mathematically inclined:
 
 $$
-\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players} - 1\rangle}\right\rceil
+\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players}\rangle - 1}\right\rceil
 $$
 
-\section{Glossary}
-\begin{description}
-  \item[card back] (\autoref{sec:playcard})\\
-    A card that is face-down.
-  \item[Stack] (\autoref{sec:setup})\\
-    An area where a card may be played.
-\end{description}
+In the case of a tie for the least number of cards, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, players B and C will both receive $\left\lceil\frac{(2+1+2) - 1}{4 - 1}\right\rceil = 2$ points each.
+
+In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.
+
+\subsection{1 Player}
+
+The score for a single-player game is number of cards left in your hand subtracted from 5 (the number of starting cards).
+
+$$
+\langle\textrm{Score}\rangle = 5 - \langle\textrm{\# of cards}\rangle
+$$
+
+Scores for single-player games are not comparable with scores for multiplayer games.
 
 \medskip
 \hrule
