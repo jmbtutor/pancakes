@@ -55,6 +55,7 @@ The playing field formed by these eight Stacks is called the ``Griddle''.
 Deal five cards to each player and set aside the rest of the deck to be the Draw Pile. Decide on a player order.
 
 \section{Rules}
+\label{sec:rules}
 
 The goal of the game is to get rid of all the cards in your hand.
 
@@ -145,10 +146,6 @@ Card counts are public. You may ask another player how many cards are in their h
 \pagebreak
 \section{Scoring}
 
-There are two scoring schemes: one for multiplayer-games and one for single-player games. Higher scores are better.
-
-\subsection{2+ Players}
-
 Points are awarded to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.
 
 For the mathematically inclined:
@@ -161,12 +158,20 @@ In the case of a tie for the least number of cards, those tied will each calcula
 
 In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.
 
-\subsection{1 Player}
+\pagebreak
+\section{Solitaire}
+\label{sec:solitaire}
 
-The score for a single-player game is number of cards left in your hand subtracted from 5 (the number of starting cards).
+Pancakes can be played as a solitaire (single-player) game. The goal when playing as a solitaire is to complete as many hands as you can.
+
+The rules for playing solitaire are the same as with the multiplayer game (see \autoref{sec:rules}) with an additional rule to handle completed hands: when you empty your hand, that hand is considered complete and you must draw five cards from the Draw Pile to start a new hand. If there are fewer than five cards in the Draw Pile, then your new hand is the rest of the Draw Pile. Continue playing hands until the Draw Pile is empty and you can no longer continue.
+
+\subsection{Scoring}
+
+The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.
 
 $$
-\langle\textrm{Score}\rangle = 5 - \langle\textrm{\# of cards}\rangle
+\langle\textrm{Score}\rangle = 5 \times \langle\textrm{\# of completed hands}\rangle - \langle\textrm{\# of cards remaining in hand}\rangle
 $$
 
 Scores for single-player games are not comparable with scores for multiplayer games.
