@@ -25,6 +25,19 @@
 
 \setcounter{secnumdepth}{4}
 
+\newcommand\copyrightfooter{
+  \medskip
+  \hrule
+
+  {
+    \small
+    \includegraphics[scale=0.5]{cc-by.eps}\\
+    This work is licensed under the Creative Commons Attribution 4.0
+    International License. To view a copy of this license, visit
+    \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+  }
+}
+
 \begin{document}
 \title{Pancakes\\ \large A flipping card game, v\theversion}
 \author{Johann Tutor}
@@ -34,7 +47,7 @@
 Pancakes is a quick and easy-to-learn card game developed by Johann Tutor, originally developed from an ad-hoc session of an Eleusis-like game.
 
 When teaching this game to someone else, it is recommended that they play without being told the rules for the first game;
-only answer ``yes''/``no'' questions and correct them when they do something illegal.
+only answer ``yes''/``no'' questions and correct them when they do something illegal. See \autoref{appendix:firsttime} for details.
 
 \tableofcontents
 
@@ -72,14 +85,14 @@ You have two ways to play your turn: you may play from your hand, or you may pla
 \paragraph{}
 A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.
 
-\paragraph{}
+\paragraph{} \label{par:flip}
 If the card you play is a different color than the one on the top of the Stack, flip the Stack so that the card on the bottom is now on top.
 
-\paragraph{}
+\paragraph{} \label{par:empty}
 Empty Stacks and card backs are always considered the same color as the card played on top unless the card is a Joker.
 In other words, playing a card that is not a Joker on top of an empty Stack or a card back does not flip the Stack.
 
-\paragraph{}
+\paragraph{} \label{par:joker}
 Jokers are always considered a different color than the card on which it is played or the card that is played on top of it, including empty Stacks and card backs.
 In other words, playing a Joker or playing any card on top of a Joker flips the Stack, even if it is the only card in the Stack.
 
@@ -91,7 +104,7 @@ On your turn, you may choose to play from your hand.
 \paragraph{}
 If you have a card that you may legally play according to \autoref{sec:legalplays}, play it.
 
-\paragraph{}
+\paragraph{} \label{par:draw}
 If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card.
 
 \paragraph{}
@@ -125,6 +138,7 @@ Cards may be placed on empty Stacks and card backs, but card backs may not be tr
 If there are no transfers possible, you must play from your hand. See \autoref{sec:fromhand} for details.
 
 \subsection{Passing}
+\label{sec:passing}
 
 \paragraph{}
 If you choose to play from your hand and you need to draw a card because you have no legal plays, but the Draw Pile is empty, either because it was already empty or because it became empty while drawing, then you must pass as you have no other options.
@@ -132,7 +146,7 @@ If you choose to play from your hand and you need to draw a card because you hav
 \paragraph{}
 You may not pass if you have a legal play in your hand. Note that it is legal to pass even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
 
-\paragraph{}
+\paragraph{} \label{par:pancakeflip}
 If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person can go; in this case, the next time everyone passes, the Stacks are flipped again according to this rule.
 
 \subsection{Winning}
@@ -188,15 +202,39 @@ Scores for single-player games are not comparable with scores for multiplayer ga
     An area where a card may be played.
 \end{description}
 
-\medskip
-\hrule
+\copyrightfooter
 
-{
-  \small
-  \includegraphics[scale=0.5]{cc-by.eps}\\
-  This work is licensed under the Creative Commons Attribution 4.0
-  International License. To view a copy of this license, visit
-  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-}
+% Number appendices with letters
+\newpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Teaching a First-Time Player}
+\label{appendix:firsttime}
+
+When teaching a first-time player, the aim of the first game should be to teach the first-time player by exposing them to as many rules as possible, so it is recommended to forgo usual winning strategies for the sake of wide rule coverage. It is recommended that they discover the rules as they play instead of being told at the beginning.
+
+The first-time player will invariably have questions; only answer ``yes''/``no'' questions, and only for the sake of moving the game forward. Instead, encourage them to experiment and correct them when they do something illegal.
+
+When playing, it is recommended to use the following sequence of moves when possible:
+
+\begin{enumerate}
+  \item Play a regular card from your hand so that a Stack flips. (\autoref{par:flip})
+  \item Play a regular card from your hand so that a Stack does not flip. (implied by \autoref{par:flip})
+  \item Play from the Griddle. (\autoref{sec:fromstack})
+  \item Play from your hand on an empty Stack or a card back. (\autoref{par:empty})
+  \item Play a Joker. (\autoref{par:joker})
+  \item Play from your hand until you are forced to draw, then draw. (\autoref{par:draw})
+  \item Pass. (\autoref{sec:passing})
+  \item Declare ``Pancakes!''. (\autoref{par:pancakeflip})
+\end{enumerate}
+
+It is very unlikely that you will be able to execute all of these, but try for as many as you can.
+
+After the game is done, ask the first-time player what they think the rules are. Correct them as necessary, then fill in the missing rules.
+
+Once they have been made aware of the rules, offer to play again. If they accept, you are free to play however you like.
+
+\copyrightfooter
 
 \end{document}
