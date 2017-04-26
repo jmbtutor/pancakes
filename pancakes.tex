@@ -54,6 +54,7 @@ only answer ``yes''/``no'' questions and correct them when they do something ill
 \newpage
 
 \section{Requirements}
+\label{sec:requirements}
 
 Pancakes uses a standard deck of cards. Jokers are optional but highly recommended.
 Up to five players may play.
@@ -82,7 +83,7 @@ You have two ways to play your turn: you may play from your hand, or you may pla
 \subsubsection{Basic Rules}
 \label{sec:legalplays}
 
-\paragraph{}
+\paragraph{} \label{par:basicplay}
 A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.
 
 \paragraph{} \label{par:flip}
@@ -101,23 +102,23 @@ In other words, playing a Joker or playing any card on top of a Joker flips the 
 
 On your turn, you may choose to play from your hand.
 
-\paragraph{}
+\paragraph{} \label{par:playifpossible}
 If you have a card that you may legally play according to \autoref{sec:legalplays}, play it.
 
 \paragraph{} \label{par:draw}
 If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card.
 
-\paragraph{}
+\paragraph{} \label{par:drawrestrictions}
 You cannot draw if you have any legal plays in your hand and you must play the first card that gives you a legal play when drawing.
 However, if you accidentally started drawing illegally (i.e. you had a legal play in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
 
-\paragraph{}
+\paragraph{} \label{par:emptydrawpile}
 If the Draw Pile is or becomes empty while drawing and you still need to draw, you must pass as you have no legal plays.
 
-\paragraph{}
+\paragraph{} \label{par:drawnogriddle}
 You may not play from the Griddle until your next turn once you have started drawing.
 
-\paragraph{}
+\paragraph{} \label{par:nocardterminate}
 If you have no more cards in your hand at the end of your turn, the game ends immediately.
 
 \subsubsection{Playing From the Griddle}
@@ -125,40 +126,43 @@ If you have no more cards in your hand at the end of your turn, the game ends im
 
 On your turn, you may choose to play from the Griddle instead of your hand. Note that if you have already started drawing, you may not play from the Griddle until your next turn.
 
-\paragraph{}
+\paragraph{} \label{par:transfer}
 Take the top card of one Stack and place it on the other Stack. This transfer must be done according to the basic rules outlined in \autoref{sec:legalplays}.
 
-\paragraph{}
+\paragraph{} \label{par:expose}
 If you expose a card back on the first Stack, flip the top card (not the whole Stack) so that it is face-up.
 
-\paragraph{}
+\paragraph{} \label{par:nocardbacktransfer}
 Cards may be placed on empty Stacks and card backs, but card backs may not be transferred from one Stack to another.
 
-\paragraph{}
+\paragraph{} \label{par:notransferfallback}
 If there are no transfers possible, you must play from your hand. See \autoref{sec:fromhand} for details.
 
 \subsection{Passing}
 \label{sec:passing}
 
-\paragraph{}
+\paragraph{} \label{par:passcondition}
 If you choose to play from your hand and you need to draw a card because you have no legal plays, but the Draw Pile is empty, either because it was already empty or because it became empty while drawing, then you must pass as you have no other options.
 
-\paragraph{}
+\paragraph{} \label{par:passrestriction}
 You may not pass if you have a legal play in your hand. Note that it is legal to pass even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
 
 \paragraph{} \label{par:pancakeflip}
 If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person can go; in this case, the next time everyone passes, the Stacks are flipped again according to this rule.
 
 \subsection{Winning}
+\label{sec:winning}
 
 The player who empties their hand first wins the game. If the game ends with everyone passing, the player with the least number of cards in their hand wins the game; if there are multiple players with the least number of cards, they tie.
 
 \subsection{Miscellaneous}
+\label{sec:misc}
 
 Card counts are public. You may ask another player how many cards are in their hand at any time and they must show you how many cards they have.
 
 \pagebreak
 \section{Scoring}
+\label{sec:scoring}
 
 Points are awarded to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.
 
@@ -183,6 +187,7 @@ Pancakes can be played as a solitaire (single-player) game. The goal when playin
 The rules for playing solitaire are the same as with the multiplayer game (see \autoref{sec:rules}) with an additional rule to handle completed hands: when you empty your hand, that hand is considered complete and you must draw five cards from the Draw Pile to start a new hand. If there are fewer than five cards in the Draw Pile, then your new hand is the rest of the Draw Pile. Continue playing hands until the Draw Pile is empty and you can no longer continue.
 
 \subsection{Scoring}
+\label{sec:solitairescoring}
 
 The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.
 
@@ -193,6 +198,8 @@ $$
 Scores for single-player games are not comparable with scores for multiplayer games.
 
 \section{Glossary}
+\label{sec:glossary}
+
 \begin{description}
   \item[Card back] (\autoref{sec:playcard})\\
     A card that is face-down.
