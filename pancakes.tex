@@ -73,15 +73,20 @@ Deal five cards to each player and set aside the rest of the deck to be the Draw
 
 The goal of the game is to get rid of all the cards in your hand.
 
-Players take turns placing cards onto Stacks. On each turn, you must place a card on to one of the Stacks, and you may do so in one of two ways: put down a card from your hand, or transfer a card from one Stack to another. If you cannot make a legal play, you must pass. You may only play one card per turn.
+Play proceeds in turns. Each turn has two phases: the cooking phase and the serving phase.
 
-\subsection{Playing a Card}
-\label{sec:playcard}
+\subsection{Cooking Phase}
+\label{sec:cookingphase}
 
-You have two ways to play your turn: you may play from your hand, or you may play from the Griddle. Both ways share the same basic rules, differing only in the source of the card to be played.
+During the cooking phase, you must perform an action: play from your hand, or play from the Griddle. Each results in a card being placed on a Stack.
+
+If you cannot legally perform an action, you must announce that you cannot play and forfeit your action. In this case, you still move on to the serving phase.
 
 \subsubsection{Basic Rules}
 \label{sec:legalplays}
+
+\paragraph{} \label{par:onecard}
+You may only play one card per turn.
 
 \paragraph{} \label{par:basicplay}
 A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.
@@ -113,7 +118,7 @@ You cannot draw if you have any legal plays in your hand and you must play the f
 However, if you accidentally started drawing illegally (i.e. you had a legal play in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
 
 \paragraph{} \label{par:emptydrawpile}
-If the Draw Pile is or becomes empty while drawing and you still need to draw, you must pass as you have no legal plays.
+If the Draw Pile is or becomes empty while drawing and you still need to draw, you must forfeit your action as you have no legal plays. See \autoref{sec:forfeitaction}.
 
 \paragraph{} \label{par:drawnogriddle}
 You may not play from the Griddle until your next turn once you have started drawing.
@@ -138,27 +143,52 @@ Cards may be placed on empty Stacks and card backs, but card backs may not be tr
 \paragraph{} \label{par:notransferfallback}
 If there are no transfers possible, you must play from your hand. See \autoref{sec:fromhand} for details.
 
+\subsubsection{Forfeiting Your Action}
+\label{sec:forfeitaction}
+
+\paragraph{} \label{par:forfeitactioncondition}
+If you chose to play from your hand and you have no legal plays, but you cannot draw because the Draw Pile is empty, then you must forfeit your action as you have no other options.
+
+\paragraph{} \label{par:forfeitactionrestriction}
+You may not forfeit your action if you have a legal play in your hand. Note that it is legal to forfeit your action even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
+
+\subsection{Serving Phase}
+\label{sec:servingphase}
+
+A Serving is a set of four identically ranked cards face-up on the top of a single Stack. Jokers and card backs are not included in a Serving.
+
+After you have completed your action (or lack thereof), if there are any Servings on the Griddle, you may choose to take any number of them (including none) to add to your Tray for points if you win at the end. Note that any required flips must be done before Servings are taken.
+
+\paragraph{} \label{par:takeserving}
+Take the Serving and put it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.
+
+\paragraph{} \label{par:servingexpose}
+Do not flip any cards in the affected Stack, even if you expose a card back by taking the Serving.
+
 \subsection{Passing}
 \label{sec:passing}
 
-\paragraph{} \label{par:passcondition}
-If you choose to play from your hand and you need to draw a card because you have no legal plays, but the Draw Pile is empty, either because it was already empty or because it became empty while drawing, then you must pass as you have no other options.
-
-\paragraph{} \label{par:passrestriction}
-You may not pass if you have a legal play in your hand. Note that it is legal to pass even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
+\paragraph{} \label{par:passdef}
+If you forfeited your action and did not take a Serving, then you have passed and must declare it. Note that forfeiting your action but taking a Serving does not count as a pass.
 
 \paragraph{} \label{par:pancakeflip}
-If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person can go; in this case, the next time everyone passes, the Stacks are flipped again according to this rule.
+If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person does an action or takes a Serving; in that case, the next time everyone passes, the Stacks are flipped again according to this rule.
 
 \subsection{Winning}
 \label{sec:winning}
 
-The player who empties their hand first wins the game. If the game ends with everyone passing, the player with the least number of cards in their hand wins the game; if there are multiple players with the least number of cards, they tie.
+The player who empties their hand first wins the game. If the game ends with everyone passing, the player with the fewest cards in their hand wins the game.
+If there are multiple players with the fewest cards in hand, then of those, the player with the most Servings wins the game.
+If there are multiple players with the fewest cards in hand and the most Servings, then they tie.
 
 \subsection{Miscellaneous}
 \label{sec:misc}
 
+\paragraph{} \label{par:cardcount}
 Card counts are public. You may ask another player how many cards are in their hand at any time and they must show you how many cards they have.
+
+\paragraph{} \label{par:inspect}
+You may inspect the face-up cards of any Stack at any time on your turn.
 
 \pagebreak
 \section{Scoring}
@@ -169,10 +199,10 @@ Points are awarded to the winner of the game. The winner's score is calculated a
 For the mathematically inclined:
 
 $$
-\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players}\rangle - 1}\right\rceil
+\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players}\rangle - 1}\right\rceil + \langle\textrm{Servings on Tray}\rangle
 $$
 
-In the case of a tie for the least number of cards, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, players B and C will both receive $\left\lceil\frac{(2+1+2) - 1}{4 - 1}\right\rceil = 2$ points each.
+In the case of a tie, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, with players B and C having 1 Serving each, players B and C will both receive $\left\lceil\frac{(2+1+2) - 1}{4 - 1}\right\rceil + 1 = 3$ points each.
 
 In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.
 
@@ -192,21 +222,30 @@ The rules for playing solitaire are the same as with the multiplayer game (see \
 The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.
 
 $$
-\langle\textrm{Score}\rangle = 5 \times \langle\textrm{\# of completed hands}\rangle - \langle\textrm{\# of cards remaining in hand}\rangle
+\langle\textrm{Score}\rangle = 5 \times \langle\textrm{\# of completed hands}\rangle - \langle\textrm{\# of cards remaining in hand}\rangle + \langle\textrm{\# of Servings}\rangle
 $$
 
 Scores for single-player games are not comparable with scores for multiplayer games.
 
+\pagebreak
 \section{Glossary}
 \label{sec:glossary}
 
 \begin{description}
-  \item[Card back] (\autoref{sec:playcard})\\
+  \item[Card back] (\autoref{sec:legalplays})\\
     A card that is face-down.
+  \item[Cooking phase] (\autoref{sec:cookingphase})\\
+    The first phase of a turn. This is the phase in which you play a card.
   \item[Griddle] (\autoref{sec:setup})\\
     The playing field formed by the eight Stacks.
+  \item[Serving] (\autoref{sec:servingphase})\\
+    A set of four identically ranked cards. These cards must be face-up on the top of a single Stack for them to count as a Serving on the Griddle.
+  \item[Serving phase] (\autoref{sec:servingphase})\\
+    The second phase of a turn. This is the phase in which Servings are taken.
   \item[Stack] (\autoref{sec:setup})\\
     An area where a card may be played.
+  \item[Tray] (\autoref{par:takeserving})\\
+    The area in front of you where you place the Servings you have collected.
 \end{description}
 
 \copyrightfooter
@@ -231,8 +270,11 @@ When playing, it is recommended to use the following sequence of moves when poss
   \item Play from the Griddle. (\autoref{sec:fromstack})
   \item Play from your hand on an empty Stack or a card back. (\autoref{par:empty})
   \item Play a Joker. (\autoref{par:joker})
+  \item Inspect a Stack. (\autoref{par:inspect})
+  \item Take a Serving. (\autoref{sec:servingphase})
+  \item Ask how many cards are in an opponent's hand. (\autoref{par:cardcount})
   \item Play from your hand until you are forced to draw, then draw. (\autoref{par:draw})
-  \item Pass. (\autoref{sec:passing})
+  \item Forfeit your action. (\autoref{sec:forfeitaction})
   \item Declare ``Pancakes!''. (\autoref{par:pancakeflip})
 \end{enumerate}
 
