@@ -78,9 +78,9 @@ Play proceeds in turns. Each turn has two phases: the cooking phase and the serv
 \subsection{Cooking Phase}
 \label{sec:cookingphase}
 
-During the cooking phase, you must perform an action: play from your hand, or play from the Griddle. Each results in a card being placed on a Stack.
+During the cooking phase, you must perform an action: play from your hand (\autoref{sec:fromhand}), or play from the Griddle (\autoref{sec:fromstack}). Each follows the same basic rules (\autoref{sec:legalplays}) and results in a card being placed on a Stack.
 
-If you cannot legally perform an action, you must announce that you cannot play and forfeit your action. In this case, you still move on to the serving phase.
+If you cannot legally perform an action, you must announce that you have no play and forfeit your action (\autoref{sec:forfeitaction}). In this case, you still move on to the serving phase.
 
 \subsubsection{Basic Rules}
 \label{sec:legalplays}
@@ -111,20 +111,14 @@ On your turn, you may choose to play from your hand.
 If you have a card that you may legally play according to \autoref{sec:legalplays}, play it.
 
 \paragraph{} \label{par:draw}
-If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card.
+If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card. Note that you are committed to drawing once you have started, so you may not play from the Griddle until your next turn once you have started drawing.
 
 \paragraph{} \label{par:drawrestrictions}
-You cannot draw if you have any legal plays in your hand and you must play the first card that gives you a legal play when drawing.
-However, if you accidentally started drawing illegally (i.e. you had a legal play in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
+You cannot draw if you have any legal plays in your hand, and you must play the first card that gives you a legal play when drawing.
+However, if you accidentally started drawing illegally (i.e. you had a legal play already in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
 
 \paragraph{} \label{par:emptydrawpile}
 If the Draw Pile is or becomes empty while drawing and you still need to draw, you must forfeit your action as you have no legal plays. See \autoref{sec:forfeitaction}.
-
-\paragraph{} \label{par:drawnogriddle}
-You may not play from the Griddle until your next turn once you have started drawing.
-
-\paragraph{} \label{par:nocardterminate}
-If you have no more cards in your hand at the end of your turn, the game ends immediately.
 
 \subsubsection{Playing From the Griddle}
 \label{sec:fromstack}
@@ -160,7 +154,7 @@ A Serving is a set of four identically ranked cards face-up on the top of a sing
 After you have completed your action (or lack thereof), if there are any Servings on the Griddle, you may choose to take any number of them (including none) to add to your Tray for points if you win at the end. Note that any required flips must be done before Servings are taken.
 
 \paragraph{} \label{par:takeserving}
-Take the Serving and put it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.
+Take the Serving and place it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.
 
 \paragraph{} \label{par:servingexpose}
 Do not flip any cards in the affected Stack, even if you expose a card back by taking the Serving.
@@ -174,10 +168,15 @@ If you forfeited your action and did not take a Serving, then you have passed an
 \paragraph{} \label{par:pancakeflip}
 If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person does an action or takes a Serving; in that case, the next time everyone passes, the Stacks are flipped again according to this rule.
 
-\subsection{Winning}
+\subsection{Ending the Game}
+\label{sec:endgame}
+
+The game ends when a player empties their hand and their turn finishes (they are allowed to complete their serving phase) or when all players pass in succession immediately after ``Pancakes!'' is called.
+
+\subsubsection{Winning}
 \label{sec:winning}
 
-The player who empties their hand first wins the game. If the game ends with everyone passing, the player with the fewest cards in their hand wins the game.
+The player who empties their hand first wins the game. If the game ends with all players passing, the player with the fewest cards in their hand wins the game.
 If there are multiple players with the fewest cards in hand, then of those, the player with the most Servings wins the game.
 If there are multiple players with the fewest cards in hand and the most Servings, then they tie.
 
