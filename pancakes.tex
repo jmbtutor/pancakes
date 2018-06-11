@@ -45,14 +45,12 @@ only answer ``yes''/``no'' questions and correct them when they do something ill
 
 \newpage
 
-\section{Requirements}
-\label{sec:requirements}
+\section{Requirements \label{sec:requirements}}
 
 Pancakes uses a standard deck of cards. Jokers are optional but highly recommended.
 Up to five players may play.
 
-\section{Setting Up}
-\label{sec:setup}
+\section{Setting Up \label{sec:setup}}
 
 Shuffle the deck. Deal eight cards face-down on the table, then deal one card face-up on each of those to form eight Stacks.
 These Stacks should be arranged in four centered rows with 1-3-3-1 Stacks each.
@@ -60,130 +58,118 @@ The playing field formed by these eight Stacks is called the ``Griddle''.
 
 Deal five cards to each player and set aside the rest of the deck to be the Draw Pile. Decide on a player order.
 
-\section{Rules}
-\label{sec:rules}
+\section{Rules \label{sec:rules}}
 
 The goal of the game is to get rid of all the cards in your hand.
 
 Play proceeds in turns. Each turn has two phases: the cooking phase and the serving phase.
 
-\subsection{Cooking Phase}
-\label{sec:cookingphase}
+\subsection{Cooking Phase \label{sec:cookingphase}}
 
 During the cooking phase, you must perform an action: play from your hand (\autoref{sec:fromhand}), or play from the Griddle (\autoref{sec:fromstack}). Each follows the same basic rules (\autoref{sec:legalplays}) and results in a card being placed on a Stack.
 
 If you cannot legally perform an action, you must announce that you have no play and forfeit your action (\autoref{sec:forfeitaction}). In this case, you still move on to the serving phase.
 
-\subsubsection{Basic Rules}
-\label{sec:legalplays}
+\subsubsection{Basic Rules \label{sec:legalplays}}
 
-\paragraph{} \label{par:onecard}
+\paragraph{\label{par:onecard}}
 You may only play one card per turn.
 
-\paragraph{} \label{par:basicplay}
+\paragraph{\label{par:basicplay}}
 A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.
 
-\paragraph{} \label{par:flip}
+\paragraph{\label{par:flip}}
 If the card you play is a different color than the one on the top of the Stack, flip the Stack so that the card on the bottom is now on top.
 
-\paragraph{} \label{par:empty}
+\paragraph{\label{par:empty}}
 Empty Stacks and card backs are always considered the same color as the card played on top unless the card is a Joker.
 In other words, playing a card that is not a Joker on top of an empty Stack or a card back does not flip the Stack.
 
-\paragraph{} \label{par:joker}
+\paragraph{\label{par:joker}}
 Jokers are always considered a different color than the card on which it is played or the card that is played on top of it, including empty Stacks and card backs.
 In other words, playing a Joker or playing any card on top of a Joker flips the Stack, even if it is the only card in the Stack.
 
-\subsubsection{Playing From Your Hand}
-\label{sec:fromhand}
+\subsubsection{Playing From Your Hand \label{sec:fromhand}}
 
 On your turn, you may choose to play from your hand.
 
-\paragraph{} \label{par:playifpossible}
+\paragraph{\label{par:playifpossible}}
 If you have a card that you may legally play according to \autoref{sec:legalplays}, play it.
 
-\paragraph{} \label{par:draw}
+\paragraph{\label{par:draw}}
 If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card. Note that you are committed to drawing once you have started, so you may not play from the Griddle until your next turn once you have started drawing.
 
-\paragraph{} \label{par:drawrestrictions}
+\paragraph{\label{par:drawrestrictions}}
 You cannot draw if you have any legal plays in your hand, and you must play the first card that gives you a legal play when drawing.
 However, if you accidentally started drawing illegally (i.e. you had a legal play already in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
 
-\paragraph{} \label{par:emptydrawpile}
+\paragraph{\label{par:emptydrawpile}}
 If the Draw Pile is or becomes empty while drawing and you still need to draw, you must forfeit your action as you have no legal plays. See \autoref{sec:forfeitaction}.
 
-\subsubsection{Playing From the Griddle}
-\label{sec:fromstack}
+\subsubsection{Playing From the Griddle \label{sec:fromstack}}
 
 On your turn, you may choose to play from the Griddle instead of your hand. Note that if you have already started drawing, you may not play from the Griddle until your next turn.
 
-\paragraph{} \label{par:transfer}
+\paragraph{\label{par:transfer}}
 Take the top card of one Stack and place it on the other Stack. This transfer must be done according to the basic rules outlined in \autoref{sec:legalplays}.
 
-\paragraph{} \label{par:expose}
+\paragraph{\label{par:expose}}
 If you expose a card back on the first Stack, flip the top card (not the whole Stack) so that it is face-up.
 
-\paragraph{} \label{par:nocardbacktransfer}
+\paragraph{\label{par:nocardbacktransfer}}
 Cards may be placed on empty Stacks and card backs, but card backs may not be transferred from one Stack to another.
 
-\paragraph{} \label{par:notransferfallback}
+\paragraph{\label{par:notransferfallback}}
 If there are no transfers possible, you must play from your hand. See \autoref{sec:fromhand} for details.
 
-\subsubsection{Forfeiting Your Action}
-\label{sec:forfeitaction}
+\subsubsection{Forfeiting Your Action \label{sec:forfeitaction}}
 
-\paragraph{} \label{par:forfeitactioncondition}
+\paragraph{\label{par:forfeitactioncondition}}
 If you chose to play from your hand and you have no legal plays, but you cannot draw because the Draw Pile is empty, then you must forfeit your action as you have no other options.
 
-\paragraph{} \label{par:forfeitactionrestriction}
+\paragraph{\label{par:forfeitactionrestriction}}
 You may not forfeit your action if you have a legal play in your hand. Note that it is legal to forfeit your action even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
 
-\subsection{Serving Phase}
-\label{sec:servingphase}
+\subsection{Serving Phase \label{sec:servingphase}}
 
 A Serving is a set of four identically ranked cards face-up on the top of a single Stack. Jokers and card backs are not included in a Serving.
 
 After you have completed your action (or lack thereof), if there are any Servings on the Griddle, you may choose to take any number of them (including none) to add to your Tray for points if you win at the end. Note that any required flips must be done before Servings are taken.
 
-\paragraph{} \label{par:takeserving}
+\paragraph{\label{par:takeserving}}
 Take the Serving and place it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.
 
-\paragraph{} \label{par:servingexpose}
+\paragraph{\label{par:servingexpose}}
 Do not flip any cards in the affected Stack, even if you expose a card back by taking the Serving.
 
-\subsection{Passing}
-\label{sec:passing}
+\subsection{Passing \label{sec:passing}}
 
-\paragraph{} \label{par:passdef}
+\paragraph{\label{par:passdef}}
 If you forfeited your action and did not take a Serving, then you have passed and must declare it. Note that forfeiting your action but taking a Serving does not count as a pass.
 
-\paragraph{} \label{par:pancakeflip}
+\paragraph{\label{par:pancakeflip}}
 If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person does an action or takes a Serving; in that case, the next time everyone passes, the Stacks are flipped again according to this rule.
 
-\subsection{Ending the Game}
-\label{sec:endgame}
+\subsection{Ending the Game \label{sec:endgame}}
 
 The game ends when a player empties their hand and their turn finishes (they are allowed to complete their serving phase) or when all players pass in succession immediately after ``Pancakes!'' is called.
 
-\subsubsection{Winning}
-\label{sec:winning}
+\subsubsection{Winning \label{sec:winning}}
 
 The player who empties their hand first wins the game. If the game ends with all players passing, the player with the fewest cards in their hand wins the game.
 If there are multiple players with the fewest cards in hand, then of those, the player with the most Servings wins the game.
 If there are multiple players with the fewest cards in hand and the most Servings, then they tie.
 
-\subsection{Miscellaneous}
-\label{sec:misc}
+\subsection{Miscellaneous \label{sec:misc}}
 
-\paragraph{} \label{par:cardcount}
+\paragraph{\label{par:cardcount}}
 Card counts are public. You may ask another player how many cards are in their hand at any time and they must show you how many cards they have.
 
-\paragraph{} \label{par:inspect}
+\paragraph{\label{par:inspect}}
 You may inspect the face-up cards of any Stack at any time on your turn.
 
 \pagebreak
-\section{Scoring}
-\label{sec:scoring}
+\section{Scoring \label{sec:scoring}}
 
 Points are awarded to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.
 
@@ -200,15 +186,13 @@ In theory, scores should be comparable independently of the number of players. I
 When playing a set of games, it is common to end the set when a player accumulates 10 or more points.
 
 \pagebreak
-\section{Solitaire}
-\label{sec:solitaire}
+\section{Solitaire \label{sec:solitaire}}
 
 Pancakes can be played as a solitaire (single-player) game. The goal when playing as a solitaire is to complete as many hands as you can.
 
 The rules for playing solitaire are the same as with the multiplayer game (see \autoref{sec:rules}) with an additional rule to handle completed hands: when you empty your hand, that hand is considered complete and you must draw five cards from the Draw Pile to start a new hand. If there are fewer than five cards in the Draw Pile, then your new hand is the rest of the Draw Pile. Continue playing hands until the Draw Pile is empty and you can no longer continue.
 
-\subsection{Scoring}
-\label{sec:solitairescoring}
+\subsection{Scoring \label{sec:solitairescoring}}
 
 The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.
 
@@ -219,8 +203,7 @@ $$
 Scores for single-player games are not comparable with scores for multiplayer games.
 
 \pagebreak
-\section{Glossary}
-\label{sec:glossary}
+\section{Glossary \label{sec:glossary}}
 
 \begin{description}
   \item[Card back] (\autoref{sec:legalplays})\\
@@ -244,8 +227,7 @@ Scores for single-player games are not comparable with scores for multiplayer ga
 \appendix
 \renewcommand{\thesection}{\Alph{section}}
 
-\section{Teaching a First-Time Player}
-\label{appendix:firsttime}
+\section{Teaching a First-Time Player \label{appendix:firsttime}}
 
 When teaching a first-time player, the aim of the first game should be to teach the first-time player by exposing them to as many rules as possible, so it is recommended to forgo usual winning strategies for the sake of wide rule coverage. It is recommended that they discover the rules as they play instead of being told at the beginning.
 
