@@ -22,28 +22,9 @@
 \renewcommand{\subsectionautorefname}{§}
 \renewcommand{\subsubsectionautorefname}{§}
 \renewcommand{\paragraphautorefname}{¶}
+%HEVEA\renewcommand{\hrule}{\@hr{}{}}
 
 \setcounter{secnumdepth}{4}
-
-\newcommand\copyrightfooter{
-  \medskip
-  \hrule
-
-  {
-    \small
-    \begin{wrapfigure}{L}{0.175\textwidth}
-      \includegraphics[scale=0.5]{cc-by.eps}
-    \end{wrapfigure}
-
-    \copyright 2016--2018, Johann Tutor.
-
-    This work is licensed under the Creative Commons Attribution 4.0
-    International License. To view a copy of this license, visit
-    \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-
-    This document was typeset with \LaTeX. The source code and updates are available on GitHub: \url{https://github.com/jmbtutor/pancakes}
-  }
-}
 
 \begin{document}
 \title{Pancakes\\ \large A flipping card game, v\theversion}
@@ -51,12 +32,16 @@
 \date{\today}
 \maketitle
 
+%HEVEA\begin{center}\textit{This document is also available as a \href{https://github.com/jmbtutor/pancakes/releases/download/v\theversion{}/pancakes-v\theversion{}.pdf}{PDF}. The PDF is authoritative for any discrepancies between it and this document.}\end{center}
+
 Pancakes is a quick and easy-to-learn card game developed by Johann Tutor, originally developed from an ad-hoc session of an Eleusis-like game.
 
 When teaching this game to someone else, it is recommended that they play without being told the rules for the first game;
 only answer ``yes''/``no'' questions and correct them when they do something illegal. See \autoref{appendix:firsttime} for details.
 
+%HEVEA\hrule
 \tableofcontents
+%HEVEA\hrule
 
 \newpage
 
@@ -208,7 +193,7 @@ $$
 \langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players}\rangle - 1}\right\rceil + \langle\textrm{Servings on Tray}\rangle
 $$
 
-In the case of a tie, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, with players B and C having 1 Serving each, players B and C will both receive $\left\lceil\frac{(2+1+2) - 1}{4 - 1}\right\rceil + 1 = 3$ points each.
+In the case of a tie, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, with players B and C having 1 Serving each, players B and C will both receive $\left\lceil\frac{\left((2+1+2) - 1\right)}{\left(4 - 1\right)}\right\rceil + 1 = 3$ points each.
 
 In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.
 
@@ -254,8 +239,6 @@ Scores for single-player games are not comparable with scores for multiplayer ga
     The area in front of you where you place the Servings you have collected.
 \end{description}
 
-\copyrightfooter
-
 % Number appendices with letters
 \newpage
 \appendix
@@ -290,6 +273,27 @@ After the game is done, ask the first-time player what they think the rules are.
 
 Once they have been made aware of the rules, offer to play again. If they accept, you are free to play however you like.
 
-\copyrightfooter
+% Copyright footer
+\medskip
+\hrule
+
+{
+  \small
+%BEGIN LATEX
+  \begin{wrapfigure}{L}{0.175\textwidth}
+%END LATEX
+    \includegraphics[scale=0.5]{cc-by.eps}
+%BEGIN LATEX
+  \end{wrapfigure}
+%END LATEX
+
+  \copyright 2016--2018, Johann Tutor.
+
+  This work is licensed under the Creative Commons Attribution 4.0
+  International License. To view a copy of this license, visit
+  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+  This document was typeset with \LaTeX. The source code and updates are available on GitHub: \url{https://github.com/jmbtutor/pancakes}
+}
 
 \end{document}
