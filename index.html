@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="hevea 2.31">
+<style type="text/css">
+.c000{font-family:monospace;font-size:small}
+.c001{font-size:small}
+.c002{font-style:italic}
+.c003{font-weight:bold}
+.c004{text-align:center}
+.c005{vertical-align:middle}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+div.footnotetext P{margin:0px; text-indent:1em;}
+.title{margin:2ex auto;text-align:center}
+.titlemain{margin:1ex 2ex 2ex 1ex;}
+.titlerest{margin:0ex 2ex;}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+div table{margin-left:inherit;margin-right:inherit;margin-bottom:2px;margin-top:2px}
+td table{margin:auto;}
+table{border-collapse:collapse;}
+td{padding:0;}
+pre{text-align:left;margin-left:0ex;margin-right:auto;}
+blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
+td p{margin:0px;}
+.hbar{border:none;height:2px;width:100%;background-color:black;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px; border:none;}
+.dcenter{margin:0ex auto;}
+</style>
+<title>Pancakes 
+A flipping card game, v2.0.0
+</title>
+</head>
+<body>
+<!--HEVEA command line is: hevea -fix -o index.html -O pancakes.tex -->
+<!--CUT STYLE article--><!--CUT DEF section 1 --><table class="title"><tr><td style="padding:1ex"><h1 class="titlemain">Pancakes<br>
+<span style="font-size:large">A flipping card game, v2.0.0</span></h1><h3 class="titlerest">Johann Tutor</h3><h3 class="titlerest">June 10, 2018</h3></td></tr>
+</table><div class="center"><span class="c002">This document is also available as a </span><a href="https://github.com/jmbtutor/pancakes/releases/download/v2.0.0/pancakes-v2.0.0.pdf"><span class="c002">PDF</span></a><span class="c002">. The PDF is authoritative for any discrepancies between it and this document.</span></div><p>Pancakes is a quick and easy-to-learn card game developed by Johann Tutor, originally developed from an ad-hoc session of an Eleusis-like game.</p><p>When teaching this game to someone else, it is recommended that they play without being told the rules for the first game;
+only answer “yes”/“no” questions and correct them when they do something illegal. See <a href="#appendix%3Afirsttime">§ A</a> for details.</p><hr><!--TOC section id="sec1" Contents-->
+<h2 class="section" id="sec1">Contents</h2><!--SEC END --><ul class="toc"><li class="li-toc">
+<a href="#sec%3Arequirements">1  Requirements </a>
+</li><li class="li-toc"><a href="#sec%3Asetup">2  Setting Up </a>
+</li><li class="li-toc"><a href="#sec%3Arules">3  Rules </a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec%3Acookingphase">3.1  Cooking Phase </a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec%3Alegalplays">3.1.1  Basic Rules </a>
+</li><li class="li-toc"><a href="#sec%3Afromhand">3.1.2  Playing From Your Hand </a>
+</li><li class="li-toc"><a href="#sec%3Afromstack">3.1.3  Playing From the Griddle </a>
+</li><li class="li-toc"><a href="#sec%3Aforfeitaction">3.1.4  Forfeiting Your Action </a>
+</li></ul>
+</li><li class="li-toc"><a href="#sec%3Aservingphase">3.2  Serving Phase </a>
+</li><li class="li-toc"><a href="#sec%3Apassing">3.3  Passing </a>
+</li><li class="li-toc"><a href="#sec%3Aendgame">3.4  Ending the Game </a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec%3Awinning">3.4.1  Winning </a>
+</li></ul>
+</li><li class="li-toc"><a href="#sec%3Amisc">3.5  Miscellaneous </a>
+</li></ul>
+</li><li class="li-toc"><a href="#sec%3Ascoring">4  Scoring </a>
+</li><li class="li-toc"><a href="#sec%3Asolitaire">5  Solitaire </a>
+<ul class="toc"><li class="li-toc">
+<a href="#sec%3Asolitairescoring">5.1  Scoring </a>
+</li></ul>
+</li><li class="li-toc"><a href="#sec%3Aglossary">6  Glossary </a>
+</li><li class="li-toc"><a href="#appendix%3Afirsttime">A  Teaching a First-Time Player </a>
+</li></ul><hr>
+<!--TOC section id="sec:requirements" Requirements -->
+<h2 class="section" id="sec:requirements">1  Requirements </h2><!--SEC END --><p>Pancakes uses a standard deck of cards. Jokers are optional but highly recommended.
+Up to five players may play.</p>
+<!--TOC section id="sec:setup" Setting Up -->
+<h2 class="section" id="sec:setup">2  Setting Up </h2><!--SEC END --><p>Shuffle the deck. Deal eight cards face-down on the table, then deal one card face-up on each of those to form eight Stacks.
+These Stacks should be arranged in four centered rows with 1-3-3-1 Stacks each.
+The playing field formed by these eight Stacks is called the “Griddle”.</p><p>Deal five cards to each player and set aside the rest of the deck to be the Draw Pile. Decide on a player order.</p>
+<!--TOC section id="sec:rules" Rules -->
+<h2 class="section" id="sec:rules">3  Rules </h2><!--SEC END --><p>The goal of the game is to get rid of all the cards in your hand.</p><p>Play proceeds in turns. Each turn has two phases: the cooking phase and the serving phase.</p>
+<!--TOC subsection id="sec:cookingphase" Cooking Phase -->
+<h3 class="subsection" id="sec:cookingphase">3.1  Cooking Phase </h3><!--SEC END --><p>During the cooking phase, you must perform an action: play from your hand (<a href="#sec%3Afromhand">§ 3.1.2</a>), or play from the Griddle (<a href="#sec%3Afromstack">§ 3.1.3</a>). Each follows the same basic rules (<a href="#sec%3Alegalplays">§ 3.1.1</a>) and results in a card being placed on a Stack.</p><p>If you cannot legally perform an action, you must announce that you have no play and forfeit your action (<a href="#sec%3Aforfeitaction">§ 3.1.4</a>). In this case, you still move on to the serving phase.</p>
+<!--TOC subsubsection id="sec:legalplays" Basic Rules -->
+<h4 class="subsubsection" id="sec:legalplays">3.1.1  Basic Rules </h4><!--SEC END -->
+<!--TOC paragraph id="par:onecard" -->
+<h4 class="paragraph" id="par:onecard">3.1.1.1  </h4><!--SEC END --><p>
+You may only play one card per turn.</p>
+<!--TOC paragraph id="par:basicplay" -->
+<h4 class="paragraph" id="par:basicplay">3.1.1.2  </h4><!--SEC END --><p>
+A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.</p>
+<!--TOC paragraph id="par:flip" -->
+<h4 class="paragraph" id="par:flip">3.1.1.3  </h4><!--SEC END --><p>
+If the card you play is a different color than the one on the top of the Stack, flip the Stack so that the card on the bottom is now on top.</p>
+<!--TOC paragraph id="par:empty" -->
+<h4 class="paragraph" id="par:empty">3.1.1.4  </h4><!--SEC END --><p>
+Empty Stacks and card backs are always considered the same color as the card played on top unless the card is a Joker.
+In other words, playing a card that is not a Joker on top of an empty Stack or a card back does not flip the Stack.</p>
+<!--TOC paragraph id="par:joker" -->
+<h4 class="paragraph" id="par:joker">3.1.1.5  </h4><!--SEC END --><p>
+Jokers are always considered a different color than the card on which it is played or the card that is played on top of it, including empty Stacks and card backs.
+In other words, playing a Joker or playing any card on top of a Joker flips the Stack, even if it is the only card in the Stack.</p>
+<!--TOC subsubsection id="sec:fromhand" Playing From Your Hand -->
+<h4 class="subsubsection" id="sec:fromhand">3.1.2  Playing From Your Hand </h4><!--SEC END --><p>On your turn, you may choose to play from your hand.</p>
+<!--TOC paragraph id="par:playifpossible" -->
+<h4 class="paragraph" id="par:playifpossible">3.1.2.1  </h4><!--SEC END --><p>
+If you have a card that you may legally play according to <a href="#sec%3Alegalplays">§ 3.1.1</a>, play it.</p>
+<!--TOC paragraph id="par:draw" -->
+<h4 class="paragraph" id="par:draw">3.1.2.2  </h4><!--SEC END --><p>
+If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card. Note that you are committed to drawing once you have started, so you may not play from the Griddle until your next turn once you have started drawing.</p>
+<!--TOC paragraph id="par:drawrestrictions" -->
+<h4 class="paragraph" id="par:drawrestrictions">3.1.2.3  </h4><!--SEC END --><p>
+You cannot draw if you have any legal plays in your hand, and you must play the first card that gives you a legal play when drawing.
+However, if you accidentally started drawing illegally (i.e. you had a legal play already in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.</p>
+<!--TOC paragraph id="par:emptydrawpile" -->
+<h4 class="paragraph" id="par:emptydrawpile">3.1.2.4  </h4><!--SEC END --><p>
+If the Draw Pile is or becomes empty while drawing and you still need to draw, you must forfeit your action as you have no legal plays. See <a href="#sec%3Aforfeitaction">§ 3.1.4</a>.</p>
+<!--TOC subsubsection id="sec:fromstack" Playing From the Griddle -->
+<h4 class="subsubsection" id="sec:fromstack">3.1.3  Playing From the Griddle </h4><!--SEC END --><p>On your turn, you may choose to play from the Griddle instead of your hand. Note that if you have already started drawing, you may not play from the Griddle until your next turn.</p>
+<!--TOC paragraph id="par:transfer" -->
+<h4 class="paragraph" id="par:transfer">3.1.3.1  </h4><!--SEC END --><p>
+Take the top card of one Stack and place it on the other Stack. This transfer must be done according to the basic rules outlined in <a href="#sec%3Alegalplays">§ 3.1.1</a>.</p>
+<!--TOC paragraph id="par:expose" -->
+<h4 class="paragraph" id="par:expose">3.1.3.2  </h4><!--SEC END --><p>
+If you expose a card back on the first Stack, flip the top card (not the whole Stack) so that it is face-up.</p>
+<!--TOC paragraph id="par:nocardbacktransfer" -->
+<h4 class="paragraph" id="par:nocardbacktransfer">3.1.3.3  </h4><!--SEC END --><p>
+Cards may be placed on empty Stacks and card backs, but card backs may not be transferred from one Stack to another.</p>
+<!--TOC paragraph id="par:notransferfallback" -->
+<h4 class="paragraph" id="par:notransferfallback">3.1.3.4  </h4><!--SEC END --><p>
+If there are no transfers possible, you must play from your hand. See <a href="#sec%3Afromhand">§ 3.1.2</a> for details.</p>
+<!--TOC subsubsection id="sec:forfeitaction" Forfeiting Your Action -->
+<h4 class="subsubsection" id="sec:forfeitaction">3.1.4  Forfeiting Your Action </h4><!--SEC END -->
+<!--TOC paragraph id="par:forfeitactioncondition" -->
+<h4 class="paragraph" id="par:forfeitactioncondition">3.1.4.1  </h4><!--SEC END --><p>
+If you chose to play from your hand and you have no legal plays, but you cannot draw because the Draw Pile is empty, then you must forfeit your action as you have no other options.</p>
+<!--TOC paragraph id="par:forfeitactionrestriction" -->
+<h4 class="paragraph" id="par:forfeitactionrestriction">3.1.4.2  </h4><!--SEC END --><p>
+You may not forfeit your action if you have a legal play in your hand. Note that it is legal to forfeit your action even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.</p>
+<!--TOC subsection id="sec:servingphase" Serving Phase -->
+<h3 class="subsection" id="sec:servingphase">3.2  Serving Phase </h3><!--SEC END --><p>A Serving is a set of four identically ranked cards face-up on the top of a single Stack. Jokers and card backs are not included in a Serving.</p><p>After you have completed your action (or lack thereof), if there are any Servings on the Griddle, you may choose to take any number of them (including none) to add to your Tray for points if you win at the end. Note that any required flips must be done before Servings are taken.</p>
+<!--TOC paragraph id="par:takeserving" -->
+<h4 class="paragraph" id="par:takeserving">3.2.0.3  </h4><!--SEC END --><p>
+Take the Serving and place it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.</p>
+<!--TOC paragraph id="par:servingexpose" -->
+<h4 class="paragraph" id="par:servingexpose">3.2.0.4  </h4><!--SEC END --><p>
+Do not flip any cards in the affected Stack, even if you expose a card back by taking the Serving.</p>
+<!--TOC subsection id="sec:passing" Passing -->
+<h3 class="subsection" id="sec:passing">3.3  Passing </h3><!--SEC END -->
+<!--TOC paragraph id="par:passdef" -->
+<h4 class="paragraph" id="par:passdef">3.3.0.5  </h4><!--SEC END --><p>
+If you forfeited your action and did not take a Serving, then you have passed and must declare it. Note that forfeiting your action but taking a Serving does not count as a pass.</p>
+<!--TOC paragraph id="par:pancakeflip" -->
+<h4 class="paragraph" id="par:pancakeflip">3.3.0.6  </h4><!--SEC END --><p>
+If everyone passes in succession, shout “Pancakes!” and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person does an action or takes a Serving; in that case, the next time everyone passes, the Stacks are flipped again according to this rule.</p>
+<!--TOC subsection id="sec:endgame" Ending the Game -->
+<h3 class="subsection" id="sec:endgame">3.4  Ending the Game </h3><!--SEC END --><p>The game ends when a player empties their hand and their turn finishes (they are allowed to complete their serving phase) or when all players pass in succession immediately after “Pancakes!” is called.</p>
+<!--TOC subsubsection id="sec:winning" Winning -->
+<h4 class="subsubsection" id="sec:winning">3.4.1  Winning </h4><!--SEC END --><p>The player who empties their hand first wins the game. If the game ends with all players passing, the player with the fewest cards in their hand wins the game.
+If there are multiple players with the fewest cards in hand, then of those, the player with the most Servings wins the game.
+If there are multiple players with the fewest cards in hand and the most Servings, then they tie.</p>
+<!--TOC subsection id="sec:misc" Miscellaneous -->
+<h3 class="subsection" id="sec:misc">3.5  Miscellaneous </h3><!--SEC END -->
+<!--TOC paragraph id="par:cardcount" -->
+<h4 class="paragraph" id="par:cardcount">3.5.0.1  </h4><!--SEC END --><p>
+Card counts are public. You may ask another player how many cards are in their hand at any time and they must show you how many cards they have.</p>
+<!--TOC paragraph id="par:inspect" -->
+<h4 class="paragraph" id="par:inspect">3.5.0.2  </h4><!--SEC END --><p>
+You may inspect the face-up cards of any Stack at any time on your turn.</p>
+<!--TOC section id="sec:scoring" Scoring -->
+<h2 class="section" id="sec:scoring">4  Scoring </h2><!--SEC END --><p>Points are awarded to the winner of the game. The winner’s score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.</p><p>For the mathematically inclined:</p><table class="display dcenter"><tr class="c005"><td class="dcell">⟨Score⟩ = </td><td class="dcell">⎡<br>
+⎢<br>
+⎢<br>
+⎢</td><td class="dcell"><table class="display"><tr><td class="dcell c004">⟨others’ cards⟩ − ⟨winner’s cards⟩</td></tr>
+<tr><td class="hbar"></td></tr>
+<tr><td class="dcell c004">⟨# of players⟩ − 1</td></tr>
+</table></td><td class="dcell">⎤<br>
+⎥<br>
+⎥<br>
+⎥</td><td class="dcell">+ ⟨Servings on Tray⟩
+</td></tr>
+</table><p>In the case of a tie, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, with players B and C having 1 Serving each, players B and C will both receive ⌈((2+1+2) − 1)/(4 − 1)⌉+ 1 = 3 points each.</p><p>In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.</p><p>When playing a set of games, it is common to end the set when a player accumulates 10 or more points.</p>
+<!--TOC section id="sec:solitaire" Solitaire -->
+<h2 class="section" id="sec:solitaire">5  Solitaire </h2><!--SEC END --><p>Pancakes can be played as a solitaire (single-player) game. The goal when playing as a solitaire is to complete as many hands as you can.</p><p>The rules for playing solitaire are the same as with the multiplayer game (see <a href="#sec%3Arules">§ 3</a>) with an additional rule to handle completed hands: when you empty your hand, that hand is considered complete and you must draw five cards from the Draw Pile to start a new hand. If there are fewer than five cards in the Draw Pile, then your new hand is the rest of the Draw Pile. Continue playing hands until the Draw Pile is empty and you can no longer continue.</p>
+<!--TOC subsection id="sec:solitairescoring" Scoring -->
+<h3 class="subsection" id="sec:solitairescoring">5.1  Scoring </h3><!--SEC END --><p>The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.</p><table class="display dcenter"><tr class="c005"><td class="dcell">⟨Score⟩ = 5 × ⟨# of completed hands⟩ − ⟨# of cards remaining in hand⟩ + ⟨# of Servings⟩
+</td></tr>
+</table><p>Scores for single-player games are not comparable with scores for multiplayer games.</p>
+<!--TOC section id="sec:glossary" Glossary -->
+<h2 class="section" id="sec:glossary">6  Glossary </h2><!--SEC END --><dl class="description"><dt class="dt-description">
+<span class="c003">Card back</span></dt><dd class="dd-description"> (<a href="#sec%3Alegalplays">§ 3.1.1</a>)<br>
+ A card that is face-down.
+</dd><dt class="dt-description"><span class="c003">Cooking phase</span></dt><dd class="dd-description"> (<a href="#sec%3Acookingphase">§ 3.1</a>)<br>
+ The first phase of a turn. This is the phase in which you play a card.
+</dd><dt class="dt-description"><span class="c003">Griddle</span></dt><dd class="dd-description"> (<a href="#sec%3Asetup">§ 2</a>)<br>
+ The playing field formed by the eight Stacks.
+</dd><dt class="dt-description"><span class="c003">Serving</span></dt><dd class="dd-description"> (<a href="#sec%3Aservingphase">§ 3.2</a>)<br>
+ A set of four identically ranked cards. These cards must be face-up on the top of a single Stack for them to count as a Serving on the Griddle.
+</dd><dt class="dt-description"><span class="c003">Serving phase</span></dt><dd class="dd-description"> (<a href="#sec%3Aservingphase">§ 3.2</a>)<br>
+ The second phase of a turn. This is the phase in which Servings are taken.
+</dd><dt class="dt-description"><span class="c003">Stack</span></dt><dd class="dd-description"> (<a href="#sec%3Asetup">§ 2</a>)<br>
+ An area where a card may be played.
+</dd><dt class="dt-description"><span class="c003">Tray</span></dt><dd class="dd-description"> (<a href="#par%3Atakeserving">¶ 3.2.0.3</a>)<br>
+ The area in front of you where you place the Servings you have collected.
+</dd></dl>
+<!--TOC section id="appendix:firsttime" Teaching a First-Time Player -->
+<h2 class="section" id="appendix:firsttime">A  Teaching a First-Time Player </h2><!--SEC END --><p>When teaching a first-time player, the aim of the first game should be to teach the first-time player by exposing them to as many rules as possible, so it is recommended to forgo usual winning strategies for the sake of wide rule coverage. It is recommended that they discover the rules as they play instead of being told at the beginning.</p><p>The first-time player will invariably have questions; only answer “yes”/“no” questions, and only for the sake of moving the game forward. Instead, encourage them to experiment and correct them when they do something illegal.</p><p>When playing, it is recommended to use the following sequence of moves when possible:</p><ol class="enumerate" type=1><li class="li-enumerate">
+Play a regular card from your hand so that a Stack flips. (<a href="#par%3Aflip">¶ 3.1.1.3</a>)
+</li><li class="li-enumerate">Play a regular card from your hand so that a Stack does not flip. (implied by <a href="#par%3Aflip">¶ 3.1.1.3</a>)
+</li><li class="li-enumerate">Play from the Griddle. (<a href="#sec%3Afromstack">§ 3.1.3</a>)
+</li><li class="li-enumerate">Play from your hand on an empty Stack or a card back. (<a href="#par%3Aempty">¶ 3.1.1.4</a>)
+</li><li class="li-enumerate">Play a Joker. (<a href="#par%3Ajoker">¶ 3.1.1.5</a>)
+</li><li class="li-enumerate">Inspect a Stack. (<a href="#par%3Ainspect">¶ 3.5.0.2</a>)
+</li><li class="li-enumerate">Take a Serving. (<a href="#sec%3Aservingphase">§ 3.2</a>)
+</li><li class="li-enumerate">Ask how many cards are in an opponent’s hand. (<a href="#par%3Acardcount">¶ 3.5.0.1</a>)
+</li><li class="li-enumerate">Play from your hand until you are forced to draw, then draw. (<a href="#par%3Adraw">¶ 3.1.2.2</a>)
+</li><li class="li-enumerate">Forfeit your action. (<a href="#sec%3Aforfeitaction">§ 3.1.4</a>)
+</li><li class="li-enumerate">Declare “Pancakes!”. (<a href="#par%3Apancakeflip">¶ 3.3.0.6</a>)
+</li></ol><p>It is very unlikely that you will be able to execute all of these, but try for as many as you can.</p><p>After the game is done, ask the first-time player what they think the rules are. Correct them as necessary, then fill in the missing rules.</p><p>Once they have been made aware of the rules, offer to play again. If they accept, you are free to play however you like.</p><p><br>
+</p><hr><p>
+<span class="c001"><img src="index001.png">
+</span></p><p><span class="c001">©2016–2018, Johann Tutor.</span></p><p><span class="c001">This work is licensed under the Creative Commons Attribution 4.0
+International License. To view a copy of this license, visit
+</span><a href="http://creativecommons.org/licenses/by/4.0/"><span class="c000">http://creativecommons.org/licenses/by/4.0/</span></a><span class="c001"> or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.</span></p><p><span class="c001">This document was typeset with L<sup>A</sup>T<sub>E</sub>X. The source code and updates are available on GitHub: </span><a href="https://github.com/jmbtutor/pancakes"><span class="c000">https://github.com/jmbtutor/pancakes</span></a><span class="c001">
+</span></p><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr style="height:2"><blockquote class="quote"><em>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</em><a href="http://hevea.inria.fr/index.html"><em>H<span class="c001"><sup>E</sup></span>V<span class="c001"><sup>E</sup></span>A</em></a><em>.</em></blockquote></body>
+</html>
