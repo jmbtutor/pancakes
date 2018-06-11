@@ -1,0 +1,281 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage{mwe}
+\usepackage{libertine}
+\usepackage{inconsolata}
+\usepackage{hyperref}
+
+\newcommand\theversion{2.0.0}
+
+\hypersetup{
+  hidelinks,
+  pdftitle={Pancakes v\theversion},
+  pdfauthor={Johann Tutor}
+}
+
+\renewcommand{\sectionautorefname}{§}
+\renewcommand{\subsectionautorefname}{§}
+\renewcommand{\subsubsectionautorefname}{§}
+\renewcommand{\paragraphautorefname}{¶}
+%HEVEA\renewcommand{\hrule}{\@hr{}{}}
+
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+\title{Pancakes\\ \large A flipping card game, v\theversion}
+\author{Johann Tutor}
+\date{June 10, 2018}
+\maketitle
+
+%HEVEA\begin{center}\textit{This document is also available as a \href{https://github.com/jmbtutor/pancakes/releases/download/v\theversion{}/pancakes-v\theversion{}.pdf}{PDF}. The PDF is authoritative for any discrepancies between it and this document.}\end{center}
+
+Pancakes is a quick and easy-to-learn card game developed by Johann Tutor, originally developed from an ad-hoc session of an Eleusis-like game.
+
+When teaching this game to someone else, it is recommended that they play without being told the rules for the first game;
+only answer ``yes''/``no'' questions and correct them when they do something illegal. See \autoref{appendix:firsttime} for details.
+
+%HEVEA\hrule
+\tableofcontents
+%HEVEA\hrule
+
+\newpage
+
+\section{Requirements \label{sec:requirements}}
+
+Pancakes uses a standard deck of cards. Jokers are optional but highly recommended.
+Up to five players may play.
+
+\section{Setting Up \label{sec:setup}}
+
+Shuffle the deck. Deal eight cards face-down on the table, then deal one card face-up on each of those to form eight Stacks.
+These Stacks should be arranged in four centered rows with 1-3-3-1 Stacks each.
+The playing field formed by these eight Stacks is called the ``Griddle''.
+
+Deal five cards to each player and set aside the rest of the deck to be the Draw Pile. Decide on a player order.
+
+\section{Rules \label{sec:rules}}
+
+The goal of the game is to get rid of all the cards in your hand.
+
+Play proceeds in turns. Each turn has two phases: the cooking phase and the serving phase.
+
+\subsection{Cooking Phase \label{sec:cookingphase}}
+
+During the cooking phase, you must perform an action: play from your hand (\autoref{sec:fromhand}), or play from the Griddle (\autoref{sec:fromstack}). Each follows the same basic rules (\autoref{sec:legalplays}) and results in a card being placed on a Stack.
+
+If you cannot legally perform an action, you must announce that you have no play and forfeit your action (\autoref{sec:forfeitaction}). In this case, you still move on to the serving phase.
+
+\subsubsection{Basic Rules \label{sec:legalplays}}
+
+\paragraph{\label{par:onecard}}
+You may only play one card per turn.
+
+\paragraph{\label{par:basicplay}}
+A card may only be placed on an empty Stack or on a Stack whose top card is either the same rank (number), a Joker or a card back.
+
+\paragraph{\label{par:flip}}
+If the card you play is a different color than the one on the top of the Stack, flip the Stack so that the card on the bottom is now on top.
+
+\paragraph{\label{par:empty}}
+Empty Stacks and card backs are always considered the same color as the card played on top unless the card is a Joker.
+In other words, playing a card that is not a Joker on top of an empty Stack or a card back does not flip the Stack.
+
+\paragraph{\label{par:joker}}
+Jokers are always considered a different color than the card on which it is played or the card that is played on top of it, including empty Stacks and card backs.
+In other words, playing a Joker or playing any card on top of a Joker flips the Stack, even if it is the only card in the Stack.
+
+\subsubsection{Playing From Your Hand \label{sec:fromhand}}
+
+On your turn, you may choose to play from your hand.
+
+\paragraph{\label{par:playifpossible}}
+If you have a card that you may legally play according to \autoref{sec:legalplays}, play it.
+
+\paragraph{\label{par:draw}}
+If you do not have any cards that you may legally play, draw from the Draw Pile until you draw a card that you may legally play, then play that card. Note that you are committed to drawing once you have started, so you may not play from the Griddle until your next turn once you have started drawing.
+
+\paragraph{\label{par:drawrestrictions}}
+You cannot draw if you have any legal plays in your hand, and you must play the first card that gives you a legal play when drawing.
+However, if you accidentally started drawing illegally (i.e. you had a legal play already in your hand), you must continue to draw until you draw a card that you may legally play. Any cards that would have been legal to play cannot be played until your next turn.
+
+\paragraph{\label{par:emptydrawpile}}
+If the Draw Pile is or becomes empty while drawing and you still need to draw, you must forfeit your action as you have no legal plays. See \autoref{sec:forfeitaction}.
+
+\subsubsection{Playing From the Griddle \label{sec:fromstack}}
+
+On your turn, you may choose to play from the Griddle instead of your hand. Note that if you have already started drawing, you may not play from the Griddle until your next turn.
+
+\paragraph{\label{par:transfer}}
+Take the top card of one Stack and place it on the other Stack. This transfer must be done according to the basic rules outlined in \autoref{sec:legalplays}.
+
+\paragraph{\label{par:expose}}
+If you expose a card back on the first Stack, flip the top card (not the whole Stack) so that it is face-up.
+
+\paragraph{\label{par:nocardbacktransfer}}
+Cards may be placed on empty Stacks and card backs, but card backs may not be transferred from one Stack to another.
+
+\paragraph{\label{par:notransferfallback}}
+If there are no transfers possible, you must play from your hand. See \autoref{sec:fromhand} for details.
+
+\subsubsection{Forfeiting Your Action \label{sec:forfeitaction}}
+
+\paragraph{\label{par:forfeitactioncondition}}
+If you chose to play from your hand and you have no legal plays, but you cannot draw because the Draw Pile is empty, then you must forfeit your action as you have no other options.
+
+\paragraph{\label{par:forfeitactionrestriction}}
+You may not forfeit your action if you have a legal play in your hand. Note that it is legal to forfeit your action even if there is a legal play on the Griddle as long as the Draw Pile is empty and you have no legal plays in your hand.
+
+\subsection{Serving Phase \label{sec:servingphase}}
+
+A Serving is a set of four identically ranked cards face-up on the top of a single Stack. Jokers and card backs are not included in a Serving.
+
+After you have completed your action (or lack thereof), if there are any Servings on the Griddle, you may choose to take any number of them (including none) to add to your Tray for points if you win at the end. Note that any required flips must be done before Servings are taken.
+
+\paragraph{\label{par:takeserving}}
+Take the Serving and place it face-up on your Tray. Your Tray is the area in front of you where you can place your collected Servings.
+
+\paragraph{\label{par:servingexpose}}
+Do not flip any cards in the affected Stack, even if you expose a card back by taking the Serving.
+
+\subsection{Passing \label{sec:passing}}
+
+\paragraph{\label{par:passdef}}
+If you forfeited your action and did not take a Serving, then you have passed and must declare it. Note that forfeiting your action but taking a Serving does not count as a pass.
+
+\paragraph{\label{par:pancakeflip}}
+If everyone passes in succession, shout ``Pancakes!'' and flip all Stacks. If everyone passes immediately after that, the game ends. Note that the game does not end if at least one person does an action or takes a Serving; in that case, the next time everyone passes, the Stacks are flipped again according to this rule.
+
+\subsection{Ending the Game \label{sec:endgame}}
+
+The game ends when a player empties their hand and their turn finishes (they are allowed to complete their serving phase) or when all players pass in succession immediately after ``Pancakes!'' is called.
+
+\subsubsection{Winning \label{sec:winning}}
+
+The player who empties their hand first wins the game. If the game ends with all players passing, the player with the fewest cards in their hand wins the game.
+If there are multiple players with the fewest cards in hand, then of those, the player with the most Servings wins the game.
+If there are multiple players with the fewest cards in hand and the most Servings, then they tie.
+
+\subsection{Miscellaneous \label{sec:misc}}
+
+\paragraph{\label{par:cardcount}}
+Card counts are public. You may ask another player how many cards are in their hand at any time and they must show you how many cards they have.
+
+\paragraph{\label{par:inspect}}
+You may inspect the face-up cards of any Stack at any time on your turn.
+
+\pagebreak
+\section{Scoring \label{sec:scoring}}
+
+Points are awarded to the winner of the game. The winner's score is calculated as follows: count the number of cards that the other players have, subtract the number of cards the winner has, divide that difference by one less than the number of players, and round up to the nearest whole number.
+
+For the mathematically inclined:
+
+$$
+\langle\textrm{Score}\rangle = \left\lceil\frac{\langle\textrm{others'\ cards}\rangle - \langle\textrm{winner's\ cards}\rangle}{\langle\textrm{\#\ of\ players}\rangle - 1}\right\rceil + \langle\textrm{Servings on Tray}\rangle
+$$
+
+In the case of a tie, those tied will each calculate their points as if they had won. For example, if Players A, B, C and D have 2, 1, 1 and 2 cards remaining respectively, with players B and C having 1 Serving each, players B and C will both receive $\left\lceil\frac{\left((2+1+2) - 1\right)}{\left(4 - 1\right)}\right\rceil + 1 = 3$ points each.
+
+In theory, scores should be comparable independently of the number of players. In other words, scores for games with two players should be comparable to scores for games with five people.
+
+When playing a set of games, it is common to end the set when a player accumulates 10 or more points.
+
+\pagebreak
+\section{Solitaire \label{sec:solitaire}}
+
+Pancakes can be played as a solitaire (single-player) game. The goal when playing as a solitaire is to complete as many hands as you can.
+
+The rules for playing solitaire are the same as with the multiplayer game (see \autoref{sec:rules}) with an additional rule to handle completed hands: when you empty your hand, that hand is considered complete and you must draw five cards from the Draw Pile to start a new hand. If there are fewer than five cards in the Draw Pile, then your new hand is the rest of the Draw Pile. Continue playing hands until the Draw Pile is empty and you can no longer continue.
+
+\subsection{Scoring \label{sec:solitairescoring}}
+
+The score for a single-player game is number of completed hands multiplied by 5, less the number of cards left in your hand.
+
+$$
+\langle\textrm{Score}\rangle = 5 \times \langle\textrm{\# of completed hands}\rangle - \langle\textrm{\# of cards remaining in hand}\rangle + \langle\textrm{\# of Servings}\rangle
+$$
+
+Scores for single-player games are not comparable with scores for multiplayer games.
+
+\pagebreak
+\section{Glossary \label{sec:glossary}}
+
+\begin{description}
+  \item[Card back] (\autoref{sec:legalplays})\\
+    A card that is face-down.
+  \item[Cooking phase] (\autoref{sec:cookingphase})\\
+    The first phase of a turn. This is the phase in which you play a card.
+  \item[Griddle] (\autoref{sec:setup})\\
+    The playing field formed by the eight Stacks.
+  \item[Serving] (\autoref{sec:servingphase})\\
+    A set of four identically ranked cards. These cards must be face-up on the top of a single Stack for them to count as a Serving on the Griddle.
+  \item[Serving phase] (\autoref{sec:servingphase})\\
+    The second phase of a turn. This is the phase in which Servings are taken.
+  \item[Stack] (\autoref{sec:setup})\\
+    An area where a card may be played.
+  \item[Tray] (\autoref{par:takeserving})\\
+    The area in front of you where you place the Servings you have collected.
+\end{description}
+
+% Number appendices with letters
+\newpage
+\appendix
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Teaching a First-Time Player \label{appendix:firsttime}}
+
+When teaching a first-time player, the aim of the first game should be to teach the first-time player by exposing them to as many rules as possible, so it is recommended to forgo usual winning strategies for the sake of wide rule coverage. It is recommended that they discover the rules as they play instead of being told at the beginning.
+
+The first-time player will invariably have questions; only answer ``yes''/``no'' questions, and only for the sake of moving the game forward. Instead, encourage them to experiment and correct them when they do something illegal.
+
+When playing, it is recommended to use the following sequence of moves when possible:
+
+\begin{enumerate}
+  \item Play a regular card from your hand so that a Stack flips. (\autoref{par:flip})
+  \item Play a regular card from your hand so that a Stack does not flip. (implied by \autoref{par:flip})
+  \item Play from the Griddle. (\autoref{sec:fromstack})
+  \item Play from your hand on an empty Stack or a card back. (\autoref{par:empty})
+  \item Play a Joker. (\autoref{par:joker})
+  \item Inspect a Stack. (\autoref{par:inspect})
+  \item Take a Serving. (\autoref{sec:servingphase})
+  \item Ask how many cards are in an opponent's hand. (\autoref{par:cardcount})
+  \item Play from your hand until you are forced to draw, then draw. (\autoref{par:draw})
+  \item Forfeit your action. (\autoref{sec:forfeitaction})
+  \item Declare ``Pancakes!''. (\autoref{par:pancakeflip})
+\end{enumerate}
+
+It is very unlikely that you will be able to execute all of these, but try for as many as you can.
+
+After the game is done, ask the first-time player what they think the rules are. Correct them as necessary, then fill in the missing rules.
+
+Once they have been made aware of the rules, offer to play again. If they accept, you are free to play however you like.
+
+% Copyright footer
+\medskip
+\hrule
+
+{
+  \small
+%BEGIN LATEX
+  \begin{wrapfigure}{L}{0.175\textwidth}
+%END LATEX
+    \includegraphics[scale=0.5]{cc-by.eps}
+%BEGIN LATEX
+  \end{wrapfigure}
+%END LATEX
+
+  \copyright 2016--2018, Johann Tutor.
+
+  This work is licensed under the Creative Commons Attribution 4.0
+  International License. To view a copy of this license, visit
+  \url{http://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+  This document was typeset with \LaTeX. The source code and updates are available on GitHub: \url{https://github.com/jmbtutor/pancakes}
+}
+
+\end{document}
